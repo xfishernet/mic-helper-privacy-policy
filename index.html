@@ -13,11 +13,11 @@
 
   <h2>Information the extension handles</h2>
   <ul>
-    <li><strong>Audio:</strong> when you choose Start listening and accept the in-extension disclosure, the extension captures audio from the active browser tab and the microphone you select. Audio is split into speech segments for processing and is not saved by the extension as a recording.</li>
+    <li><strong>Audio:</strong> when you choose Start listening in the side panel after accepting the in-extension disclosure, the extension captures audio from the active browser tab and the microphone you select. Audio is split into speech segments for processing and is not saved by the extension as a recording.</li>
     <li><strong>Transcripts and generated responses:</strong> speech segments are sent to OpenAI for transcription. Transcribed text and recent conversation turns are sent to OpenAI to prepare helpful responses. If spoken responses are enabled, response text is sent to OpenAI for speech generation.</li>
     <li><strong>API key and settings:</strong> your OpenAI API key, device choices, model preference, and feature settings are stored in Chrome local extension storage on your device. The key is sent to OpenAI with requests. It is not sent to the extension publisher.</li>
     <li><strong>Context you provide:</strong> notes or reference material you choose to enter or load are stored in Chrome local extension storage. Relevant excerpts may be sent to OpenAI with session questions. Do not add information unless you are authorized to share it with OpenAI.</li>
-    <li><strong>Temporary session data:</strong> a short-lived tab capture token is stored in Chrome session storage to start capture and is removed when capture starts or expires.</li>
+    <li><strong>Temporary session data:</strong> a short-lived consent record containing the selected tab ID and consent time is stored in Chrome session storage so the side panel can start the session you approved. It is removed when capture starts, consent expires, or capture fails.</li>
   </ul>
 
   <h2>Who receives information</h2>
@@ -27,7 +27,7 @@
   <p>The extension keeps its API key, settings, and context in your Chrome profile. You can remove them in the extension settings, or remove the extension from Chrome to clear its locally stored extension data. Transcripts and responses are kept in the open side panel only for the current session and are not saved by the extension.</p>
 
   <h2>Permissions and control</h2>
-  <p>Audio capture begins only after you check the disclosure and choose Start listening. You can stop capture at any time in the side panel. The extension uses tab capture, microphone access, local and session storage, and access to api.openai.com for its stated features.</p>
+  <p>Audio capture begins only after you check the disclosure and choose Start listening in the side panel. You can stop capture at any time in the side panel. The extension uses tab capture, microphone access, local and session storage, and access to api.openai.com for its stated features. Chrome internal pages, extension pages, and the Chrome Web Store cannot be captured.</p>
 
   <h2>Children</h2>
   <p>This extension is intended for adults using it for learning and meeting assistance and is not designed for children.</p>
